@@ -1,0 +1,6 @@
+[{
+  "selector": "header > .region"
+}, {
+  "type": "primary",
+  "selector": ".region.two"
+}]

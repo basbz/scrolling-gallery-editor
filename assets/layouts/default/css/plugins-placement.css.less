@@ -1,0 +1,179 @@
+/* BOB::20130603  - set the vertical orientation as default
+                  - need to be placed in the page or layout css itself when live site @import is available and the proper placement mixins can be used */
+.region{
+  .vertical;
+}
+
+footer{
+  .vertical; 
+}
+
+#wrapper > header{
+  /* BOB::20130610  - propogate the proper settings the the .plugins container  */
+   /*                 - also to be solved with placement mixins later on */
+  
+  &.horizontal,
+  &.sides{
+    > .plugins{
+      &:before{
+        /*content: "";*/
+        /*display: inline-block;*/
+        /*height: 100%;*/
+        /*width: 0;*/
+        /*vertical-align: middle;*/
+      }
+      
+      &:after{
+        content: '';
+        display: inline-block;
+        width: 100%;
+      }
+    }
+  }
+  
+  > .plugins,
+  > .region{
+    text-align: inherit;
+  }
+}
+/* BOB::20130603  - end*/
+
+
+.vertical{
+  .placement-vertical();
+}
+
+.horizontal{
+  .placement-horizontal();
+}
+
+.sides{
+  .placement-sides();
+}
+
+.placement-default(){
+  
+  &,
+  &.align-left{
+    text-align: left;
+  }
+
+  &.align-center{
+    text-align: center;
+  }
+
+  &.align-right{
+    text-align: right;
+  }
+  
+  .plugin{
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1; 
+    *display: inline;
+    
+    &.align-left {
+      margin-left: 0 !important;
+      margin-right: auto !important;
+    }
+    
+    &.align-center {
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+    
+    &.align-right {
+      margin-left: auto !important;
+      margin-right: 0 !important;
+    }
+    
+  }
+}
+
+
+.placement-vertical(){
+  .placement-default();
+  
+  .plugin{
+    display: block;
+  }
+}
+
+.placement-horizontal(){
+  .placement-default();
+  
+  &:before{
+    /*content: ""; this causes a white space to appear above the plugins on a horizontal page */
+    display: inline-block;
+    height: 100%;
+    width: 0;
+    vertical-align: middle;
+  }
+  
+  &,
+  &.align-top{
+    .plugin{
+      vertical-align: top; 
+    }
+  }
+
+   &.align-middle{
+     .plugin{
+       vertical-align: middle; 
+     }
+   }
+
+   &.align-bottom{
+     .plugin{
+       vertical-align: bottom; 
+     }
+   }
+
+   /* BOB 20130603 - need to null out the default .vertical properties 
+                    - need to keep my eye on cross-broser :not() or another (LESS?) solution to assign defaults without actually assigning the default classes in the HTML template */
+   &,
+   &.align-top,
+   &.align-middle,
+   &.align-bottom{
+     .plugin{
+       float: none !important;
+     }
+   }
+   /* BOB 20130603 */
+}
+
+.placement-sides(){
+  .placement-horizontal();
+  
+  /* BOB 20130610 - sides placement with vertical-align using http://www.barrelny.com/blog/text-align-justify-and-rwd/ */
+  &{
+    text-align: justify !important;
+    
+    &:after{
+      content: '';
+      display: inline-block;
+      width: 100%;
+    }
+  }
+}
+
+
+/* BOB::20130918  - the header horizontal/vertical/sides settings concerning align-left/right/center should be carried through to the .plugins container. Figure out how without re-pasting the  horizontal/vertical/sides classes on the .plugins container */
+
+
+header.align-left .plugin {
+  /*text-align: left !important; done on per plugin basis */
+}
+
+header.align-center .plugin {
+  margin-left: auto;
+  margin-right: auto;
+  /*text-align: center !important;*/
+}
+
+header.align-right .plugin {
+  margin-left: auto;
+  margin-right: 0;
+  /*text-align: right !important;*/
+}
+

@@ -1,0 +1,6 @@
+[{
+  "selector": ".region.one"
+}, {
+  "type": "primary",
+  "selector": ".region.two"
+}]

@@ -1,0 +1,143 @@
+/* See http://ryanfait.com/sticky-footer/*/
+html {
+
+  &,
+  body{
+    width: 100%;
+    height: 100% !important;
+  }
+  
+  body.content-vertical header {
+    position: sticky;
+  }
+  
+  body{
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    
+    /* BOB 20130618  - needed for IE 8/9 background_size*/
+    -ms-behavior: url(/assets/layouts/default/htc/backgroundsize.min.htc);
+    
+    &.fixed{
+
+       #content{
+         min-width: 0 !important;
+         max-width: none !important;
+       }
+
+       &.align-center{
+         #content{
+           margin:0 auto;
+         }
+       }
+
+       &.align-right{
+         #content{
+           float: right;  
+         }
+       }
+     }
+
+     &.scalable{
+
+       #content{
+          width: auto;
+          
+          &.full-width{
+            min-width: 0 !important;
+            max-width: none !important;
+          }
+       }
+
+       &.align-center{
+         #content{
+           margin-left: auto;
+           margin-right: auto;
+         }
+         #wrapper{
+           margin-left: auto;
+           margin-right: auto;
+         }
+       }
+
+       &.align-right{
+         #content{
+           margin-left: auto;
+         }
+         #wrapper{
+           margin-left: auto;
+         }
+       }
+     }
+    
+    
+    #content{
+      position: relative;
+      height: 100%;
+      height: calc(~"100% - 10px");
+      
+      box-sizing: border-box;
+      -moz-box-sizing: border-box; /* Firefox */
+      -webkit-box-sizing: border-box; /* Safari */
+      
+      > #wrapper{
+        min-height: 100%;
+        overflow: hidden;
+        
+        > header{
+          /*display: inline-block;*/
+          /*position: relative;*/
+          z-index: 404;
+          overflow: hidden;
+                      
+          > .plugins{
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            width: 100%;
+            height: 100%;
+          }
+          
+          > .region{
+            overflow: hidden;
+          }
+        }
+
+        .regions{
+          position: relative;
+          overflow: hidden;
+          
+          .region{
+            overflow: hidden;
+            height: 100%;
+            min-height: 25px;
+            
+            &.one{
+              float: left;
+            }
+            
+            &.two{
+              width: auto; 
+              position: relative;
+            }
+            
+            &.three{
+              float: right;
+            }       
+          }
+        }
+     
+        > .push{
+          clear: both;
+        }
+     
+      }
+      
+      > footer{
+        overflow: hidden;
+      }
+            
+    }
+    
+  }
+}

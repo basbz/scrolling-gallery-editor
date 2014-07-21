@@ -1,0 +1,42 @@
+.content-vertical{
+  /* Default */
+}
+
+.content-horizontal{
+  
+  #content{
+
+    #wrapper{
+      overflow: visible;
+      
+      > header{
+        z-index: 1;
+      }
+      
+      .regions{
+        white-space: nowrap;
+        overflow: visible !important;
+
+        .region{
+          display: inline-block;
+          float: none;
+          overflow: visible;
+        }
+      }
+    }
+    
+    .plugin{
+      white-space: normal;
+    }
+    
+  }
+  
+  &.layout-right,
+  &.layout-top-right{
+   .region.three{
+     float: none !important;
+     display: inline-block !important;
+    } 
+  }
+  
+}

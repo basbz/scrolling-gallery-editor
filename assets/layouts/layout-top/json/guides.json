@@ -1,0 +1,10 @@
+[{
+  "type": "horizontal",
+  "option": "header_height",
+    "layout": {
+    "left": 0,
+    "right": 0,
+    "top": "header_height"
+  },
+  "regions": "header"
+}]

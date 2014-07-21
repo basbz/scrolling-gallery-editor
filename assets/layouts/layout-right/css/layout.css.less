@@ -1,0 +1,28 @@
+body{
+  
+  .region.two.horizontal {
+    position: absolute;
+    white-space: nowrap;
+  }
+  
+  .region.two.horizontal .plugin {
+    white-space: normal;
+  }
+  
+  > #content{
+    
+    > #wrapper{
+      > header{
+        height: 100%;
+        float: right;
+      }
+    }
+  }
+} 
+
+body.header-fixed #content {
+  position: fixed;
+}
+
+body.header-fixed #content header {
+}

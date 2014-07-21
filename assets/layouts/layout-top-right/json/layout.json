@@ -1,0 +1,17 @@
+[
+  {"_oid": "align", "value": "align-center"},
+  {"_oid": "header_grouping","value": "horizontal"},
+  {"_oid": "header_align","value": "align-right"},
+  {"_oid": "content_align","value": "align-left"},
+  {"_oid": "side_width", "value": "200"},
+  {"_oid": "fixed_left", "value": "230"},
+  {"_oid": "fixed_right", "value": "230"},
+  {"_oid": "header_vertical_align", "value": "align-middle"},
+  {"_oid": "content_min_width", "value": "850"},
+  {"_oid": "page_aspect", "value": "aspect-3x2"},
+  {"_oid": "content_top", "value": "10"},
+  {"_oid": "content_left", "value": "30"},
+  {"_oid": "content_right", "value": "30"},
+  {"_oid": "typo_text_text_align", "value": "left"},
+  {"_oid": "typo_menu_text_align", "value": "left"}
+]

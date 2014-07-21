@@ -1,0 +1,29 @@
+[
+  {
+    "type": "menu",
+    "selector": "header>.plugins",
+    "options": [
+      {"_oid": "orientation","value": "horizontal"},
+      {"_oid": "margin_left","value": "10"},
+      {"_oid": "margin_right","value": "10"},
+      {"_oid": "margin_top","value": "10"},
+      {"_oid": "align", "value":"align-right"}
+    ]
+  },
+  {
+     "type": "logo",
+     "selector": "header>.plugins",
+     "options": [
+       {"_oid": "margin_left","value": "10"},
+       {"_oid": "margin_right","value": "10"},
+       {"_oid": "margin_top","value": "10"}
+     ]
+   },
+   {
+     "type": "text",
+     "selector": "footer",
+     "options": [
+       {"_oid": "align","value": "align-left"}
+     ]
+   }
+]

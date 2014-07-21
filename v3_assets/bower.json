@@ -1,0 +1,20 @@
+{
+  "name": "v3-manager-light",
+  "version": "0.0.0",
+  "authors": [
+    "Bas Ben Zineb <bas.benzineb@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+
+  "dependencies": {
+    "v3-manager-alpha": "git@github.com:viewbook/v3-manager-alpha.git"
+  }
+}

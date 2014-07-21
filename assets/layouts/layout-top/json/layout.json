@@ -1,0 +1,14 @@
+[
+  {"_oid": "align", "value": "align-center"},
+  {"_oid": "header_grouping", "value": "vertical"},
+  {"_oid": "header_align","value": "align-center"},
+  {"_oid": "content_align","value": "align-center"},
+  {"_oid": "header_vertical_align", "value": "align-top"},
+  {"_oid": "content_min_width", "value": "650"},
+  {"_oid": "page_aspect", "value": "aspect-4x3"},
+  {"_oid": "content_top", "value": "10"},
+  {"_oid": "content_left", "value": "30"},
+  {"_oid": "content_right", "value": "30"},
+  {"_oid": "typo_text_text_align", "value": "center"},
+  {"_oid": "typo_menu_text_align", "value": "center"}
+]

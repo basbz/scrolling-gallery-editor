@@ -1,0 +1,31 @@
+body{
+  
+  .region.one{
+    float: right !important;
+  }
+  
+  &.content-horizontal{
+    #wrapper{
+      > .regions{
+        
+        > .region.two{
+          float: left !important;
+        }
+        
+        > .region.one{
+          float: none !important;
+        }
+      }
+    }
+  }
+  
+  > #content{
+    
+    > #wrapper{
+      
+      > header{
+        width: 100%;
+      }
+    }
+  }
+}

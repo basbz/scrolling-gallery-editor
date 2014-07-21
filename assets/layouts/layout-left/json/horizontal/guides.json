@@ -1,0 +1,10 @@
+[{
+  "type": "vertical",
+  "option": "side_width",
+  "layout": {
+    "left": "side_width",
+    "top": 0,
+    "bottom": "footer_height"
+  },
+  "regions": "header"
+}]

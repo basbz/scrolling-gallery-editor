@@ -1,0 +1,29 @@
+[
+  {
+    "type": "gallery",
+    "selector": ".region.two",
+    "options": [
+      {"_oid": "viewport_ratio","value": "667"},
+      {"_oid": "image_align","value": "left"},
+      {"_oid": "thumbs_horizontal_align","value": "thumbs-align-left"},
+      {"_oid": "options_align","value": "options-align-left"},
+      {"_oid": "gallery_align","value": "align-left"},
+      {"_oid": "previousnext_align","value": "left"},
+      {"_oid": "indicator_align","value": "left"}
+    ]
+  },
+  {
+    "type": "text",
+    "selector": ".region.two",
+    "options": [
+      {"_oid": "align","value": "align-left"}
+    ]
+  },
+  {
+    "type": "title",
+    "selector": ".region.two",
+    "options": [
+      {"_oid": "align","value": "align-left"}
+    ]
+  }
+]

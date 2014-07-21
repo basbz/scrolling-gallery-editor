@@ -1,0 +1,19 @@
+[{
+  "type": "vertical",
+  "option": "side_width",
+  "layout": {
+    "left": "side_width",
+    "top": "header_height",
+    "bottom": "footer_height"
+  },
+  "regions": ".region.one"
+}, {
+  "type": "horizontal",
+  "option": "header_height",
+  "layout": {
+    "left": 0,
+    "right": 0,
+    "top": "header_height"
+  },
+  "regions": "header"
+}]
