@@ -8,3 +8,4 @@ scrolling-gallery-editor
 - run bower install
 - cd .. back
 - Grunt server
+- Open url in browser (Chrome)
