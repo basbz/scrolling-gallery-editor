@@ -25,6 +25,7 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
+
     connect: {
       server: {
         options: {
@@ -35,10 +36,40 @@ module.exports = function(grunt) {
           indexFile: 'server.html'
         }
       }
+    },
+
+    sass: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: 'v3_assets/styles',
+          src: ['*.scss'],
+          dest: 'v3_assets/styles',
+          ext: '.css'
+        }]
+      }
+    },
+
+    cssmin: {
+      options: {
+        report: 'gzip'
+      },
+      minify: {
+        expand: true,
+        cwd: 'v3_assets/styles',
+        src: ['*.css', '!*.min.css'],
+        dest: 'v3_assets/styles',
+        ext: '.min.css'
+      }
     }
+
   });
 
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+
   grunt.registerTask('server', 'connect');
+  grunt.registerTask('compile', ['sass', 'cssmin']);
 };
